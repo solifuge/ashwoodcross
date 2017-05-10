@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Ashwood Prototype</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+
+	<!-- Javascript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Get local if public not found.
+	<script>
+	if (!window.jQuery) document.write('<script src="/path/to/jquery-ver.sion.min.js"><\/script>');
+	</script>
+	-->
+	
+	<!-- Spoilers -->
+	<script> 
+	$(document).ready(function(){
+		$(".spoiler").click(function(){
+			$(this).children("div").slideToggle(240);
+			event.stopPropagation();
+		});
+	});
+	</script>
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="image/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="image/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="image/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="image/favicon/manifest.json">
+	<link rel="mask-icon" href="image/favicon/safari-pinned-tab.svg" color="#00A300">
+	<meta name="theme-color" content="#FFFFFF">
+</head>
+
+<!-- Body -->
+<body>
+
+<!-- Banner -->
+<div class="center width-960 text-center text-white banner"></div>
+
+<!-- Site Nav Bar -->
+<div class="float-center width-960">
+	<ul class="float-center-list text-center text-white text-bold">
+		<li><a href="#" class="column-3 nav-bar"><i class="fa fa-home"></i> Home</a></li>
+		<li><a href="#" class="column-3 nav-bar"><i class="fa fa-search"></i> Archive</a></li>
+		<li><a href="#" class="column-3 nav-bar"><i class="fa fa-info-circle"></i> About</a></li>
+		<li><a href="#" class="column-3 nav-bar"><i class="fa fa-star"></i> Extras</a></li>
+	</ul>
+</div>
+
+<!-- Page Nav Top -->
+<div class="float-center padding-8y width-960">
+	<ul class="float-center-list">
+		<li>
+			<div class="column-3"><a href="#" title="Previous Chapter" id="nav-backward-chapter"></a></div>
+		</li>
+		<li>
+			<div class="column-3"><a href="#" title="Previous Page" id="nav-backward"></a></div>
+		</li>
+		<li>
+			<div class="column-3"><a href="#" title="Next Page" id="nav-forward-disabled"></a></div>
+		</li>
+		<li>
+			<div class="column-3"><a href="#" title="Next Chapter" id="nav-forward-chapter-disabled"></a></div>
+		</li>
+	</ul>
+</div>
+
+<!-- Body and Sidebar -->
+<div class="container center grey-dark width-960">
+
+	<!-- Main Page Content -->
+	<div class="center padding-24y grey-xxlight border-grey-light width-720 column-9 float-left">
+
+		<div class="text-title">p.## > Update Title Here</div>
+
+		<div class="text-block">
+			<p>Not sure I'm sold on the width, or the banner style. I like the general feel of the layout, though?</p>
+			<p>I did my best to make it automatically resize to the browser window too. Check it out! Also, just as an FYI, only one of the links works yet. Also, hoping to add Suggestion and Chat Integration soon. Also probably dedicated links to the threads the game is run on.</p>
+		</div>
+
+		<div class="center width-560 suggestion">
+			<a href="#" class="link">Suggestion Author:</a>
+			<p>> Suggestion content goes here. How does it look when it goes long? That's a good dang question, self.</p>
+		</div>
+
+		<div class="text-block">
+			<p><b>Normal text</b> will appear in paragraph form kinda like this.</p>
+			<p>The size should be unrestricted, and slightly overflow the area that the chat, spoilers, and image content will fill. Hopefully this won't end up <span class="text-clear text-glow-black">too wonkus</span>. The pacing of the words will probably read differently from the existing format. Probably going to want to reconsider how I write this, too!</p>
+			<p>I hope it doesn't compromise the way it's written, even if it ends up being much easier to format</p>
+		</div>
+
+		<div class="center width-560 spoiler">Spoiler title here <i class="float-right fa fa-chevron-circle-down"></i>
+			<div class="spoiler-content">
+				Inner spoiler content.
+				<div class="center width-560 theme-blue-dark hover-theme-blue spoiler">Yo dawg, we heard you liked spoilers <i class="float-right fa fa-chevron-circle-down"></i>
+					<div class="spoiler-content">So we [insert remaineder of meme here].</div>
+				</div>
+			</div>
+		</div>
+
+		<table class="center chat">
+			<tr>
+				<td class="chat-icon"><img src="image/chat/hana_rough_base_LFR.png" alt="Hana Chat"></td>
+				<td class="chat-left">
+					<div class="chat-arrow-left"></div>
+					<div class="chat-box">
+						<p>Just talking to myself for the sake of testing out this whole dumb system.</p>
+						<p>Gotta make sure it holds up if the window changes size, etc.</p>
+					</div>
+				</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td class="chat-right">
+					<div class="chat-arrow-right"></div>
+					<div class="chat-box">
+						<p>Hey, self?</p>
+						<p>Your chat bubble triangle-thing is jacked up.</p>
+					</div>
+				</td>
+				<td class="chat-icon"><img src="image/chat/hana_rough_base_RFL.png" alt="Hana Chat"></td>
+			</tr>
+
+			<tr>
+				<td class="chat-icon"><img src="image/chat/hana_rough_askance_LFR.png" alt="Hana Chat"></td>
+				<td class="chat-left">
+					<div class="chat-arrow-left"></div>
+					<div class="chat-box">
+						<p>Dang.</p>
+						<p>I think it happens when words wrap.</p>
+						<p>It works okay with short paragraphs?</p>
+						<p>Might have to ditch it, or not use tables.</p>
+					</div>
+				</td>
+				<td></td>
+			</tr>
+
+		</table>
+	</div>
+
+	<!-- Sidebar Content -->
+	<div class="width-720 column-3 ">
+
+		<!-- Social Links -->
+		<div class="grey container padding-8y">
+			<h2 class="clear-right text-center">Links</h2>
+			<div class="float-center">
+				<ul class="float-center-list">
+					<li class="float-left-responsive"><a href="https://twitter.com/Dahold" title="Twitter"><div id="social-tweet"></div></a></li>
+					<li class="float-left-responsive"><a  href="#" title="RSS"><div id="social-rss"></div></a></li>
+					<li class="float-left-responsive"><a href="#" title="Patreon"><div id="social-patreon"></div></a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Recent Page Links -->
+		<div class="grey-dark container padding-8y">
+			<h2 class="clear-right text-center">Recent</h2>
+			<ul class="center padding-4x text-bold text-white text-left text-10pt">
+				<li><span>[05/10/17] </span><a href="#" class="link"> > These links will</a></li>
+				<li><span>[05/10/17] </span><a href="#" class="link"> > be sorted by</a></li>
+				<li><span>[05/10/17] </span><a href="#" class="link"> > reverse page #</a></li>
+				<li><span>[05/10/17] </span><a href="#" class="link"> > /w short title?</a></li>
+				<li><span>[05/10/17] </span><a href="#" class="link"> > Alternatively,</a></li>
+				<li><span>[05/10/17] </span><a href="#" class="link"> > only page number?</a></li>
+				<li><span>[05/10/17] </span><a href="#" class="link"> p.2 > Command</a></li>
+				<li><span>[05/10/17] </span><a href="#" class="link"> p.1 > Command</a></li>
+			</ul>
+		</div>
+
+		<!-- Recent Page Links -->
+		<div class="grey container padding-8y">
+			<h2 class=" clear-right text-center">Character Status</h2>
+			<p>If it can be managed, I'm thinking of doing a single-column tabbed character menu here, with accordion fold-style popups for different categories of Character Status info.</p>
+			<p>I might need to find another place to put it, though. Unless I cave and make the screen wider, it's kinda narrow in here.</p>
+
+		</div>
+
+	</div>
+</div>
+
+
+	<!-- Title Bar -->
+	<!--
+	NOTE: Content expands to 1280. Tiling silouette BG.
+	Title text image overlay top left. Leaderboard advert top right. -->
+	<header>
+	
+	</header>
+
+
+	<!-- Page Content -->
+	<section>
+		<!-- Top Navbar -->
+		<nav>
+
+		</nav>
+
+
+		
+		<!-- Bottom Navbar -->
+		<nav>
+
+		</nav>
+	</section>
+
+	<!-- Sidebar -->
+	<aside>
+
+	</aside>
+
+</body>
+
+
